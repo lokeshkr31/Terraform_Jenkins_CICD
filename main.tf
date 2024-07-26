@@ -12,10 +12,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "loki-s3bucket-date"
+    bucket         = "lokesh-s3bucket-date"
     key            = "globalstate/s3/terraform.tfstate"
     region         = "eu-west-1"
-    dynamodb_table = "loki-date-dblocks"
+    dynamodb_table = "lokesh-date-dblocks"
     encrypt        = true
   }
 }
