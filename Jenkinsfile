@@ -16,7 +16,7 @@ pipeline {
         stage('INIT') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'aws-key1', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                    withCredentials([usernamePassword(credentialsId: 'aws-key', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                         bat 'terraform init'
                     }
                 }
